@@ -1,0 +1,101 @@
+{
+  "editorial": {
+    "hero": "s:mercedes-amg-g-63:3",
+    "ankauf": "p:_editorial:5",
+    "showroom": "s:mercedes-amg-g-63:2",
+    "qualitaet": "p:audi-rs-6-avant-performance:5",
+    "ankauf-portrait": "s:mercedes-amg-g-63:4",
+    "ueber-uns": "p:porsche-taycan-4s:2"
+  },
+  "vehicles": {
+    "porsche-911-carrera-4-gts": {
+      "exterieur": "s:9",
+      "seite": "s:6",
+      "heck": "s:8",
+      "detail": "s:7",
+      "cockpit": "p:4"
+    },
+    "mercedes-amg-g-63": {
+      "exterieur": "s:1",
+      "seite": "s:3",
+      "detail": "s:4",
+      "cockpit": "p:4"
+    },
+    "bmw-m4-competition-xdrive": {
+      "exterieur": "s:7",
+      "seite": "s:8",
+      "detail": "p:8"
+    },
+    "audi-rs-6-avant-performance": {
+      "exterieur": "p:6",
+      "cockpit": "p:10",
+      "detail": "p:5"
+    },
+    "bmw-x5-m-competition": {
+      "exterieur": "p:3",
+      "heck": "p:5",
+      "cockpit": "p:6",
+      "interieur": "p:11",
+      "detail": "p:0"
+    },
+    "mercedes-amg-gt-63-s": {
+      "exterieur": "p:6",
+      "seite": "s:1",
+      "heck": "p:2"
+    },
+    "porsche-taycan-4s": {
+      "exterieur": "p:5",
+      "seite": "p:4",
+      "heck": "p:0",
+      "interieur": "p:8",
+      "detail": "p:2"
+    },
+    "range-rover-sport-d350": {
+      "exterieur": "s:7",
+      "seite": "s:8",
+      "detail": "p:11"
+    },
+    "land-rover-defender-110-d300": {
+      "exterieur": "p:6",
+      "seite": "p:5",
+      "heck": "p:0"
+    },
+    "vw-touareg-r-line-v6-tdi": {
+      "exterieur": "p:0",
+      "seite": "p:5",
+      "heck": "p:11",
+      "detail": "p:3"
+    },
+    "bmw-530e-limousine-m-sport": {
+      "exterieur": "p:1",
+      "seite": "p:7",
+      "heck": "p:2",
+      "cockpit": "p:4"
+    },
+    "mercedes-e-220-d-t-modell": {
+      "exterieur": "s:0",
+      "seite": "s:1",
+      "heck": "s:2"
+    },
+    "audi-q5-55-tfsi-e-quattro": {
+      "exterieur": "p:0",
+      "seite": "p:6",
+      "detail": "p:11"
+    },
+    "bmw-430i-cabrio-m-sport": {
+      "exterieur": "s:6",
+      "heck": "s:7",
+      "interieur": "p:8"
+    },
+    "audi-a6-avant-45-tfsi-quattro": {
+      "exterieur": "p:10",
+      "heck": "p:6",
+      "detail": "p:9"
+    },
+    "vw-golf-gti-clubsport": {
+      "exterieur": "p:1",
+      "seite": "p:0",
+      "detail": "p:11"
+    }
+  }
+}

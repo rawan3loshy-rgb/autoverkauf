@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: 'Archivo', system-ui, sans-serif;
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --header-h: 76px;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-ink text-ivory font-sans antialiased;
+    font-feature-settings: 'cv05' 1, 'ss03' 1;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(194, 164, 115, 0.28);
+    color: #f7f5f1;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+
+  input, select, textarea, button {
+    font-family: inherit;
+  }
+
+  /* Numeric alignment for prices and specs */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1;
+  }
+
+  /* Focus ring — restrained, champagne */
+  :focus-visible {
+    outline: 1px solid rgba(194, 164, 115, 0.75);
+    outline-offset: 2px;
+  }
+
+  /* Firefox / WebKit scrollbar in dark shell */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(242, 239, 233, 0.18) transparent;
+  }
+  *::-webkit-scrollbar { width: 10px; height: 10px; }
+  *::-webkit-scrollbar-track { background: transparent; }
+  *::-webkit-scrollbar-thumb {
+    background: rgba(242, 239, 233, 0.14);
+    border-radius: 99px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+  *::-webkit-scrollbar-thumb:hover { background: rgba(242, 239, 233, 0.26); background-clip: content-box; }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-sans text-2xs uppercase tracking-widest text-champagne;
+  }
+
+  .eyebrow-muted {
+    @apply font-sans text-2xs uppercase tracking-widest text-ivory-500;
+  }
+
+  .rule {
+    @apply h-px w-full bg-line;
+  }
+
+  /* Editorial hairline that leads an eyebrow */
+  .lead-rule::before {
+    content: '';
+    @apply mr-3 inline-block h-px w-8 translate-y-[-3px] bg-champagne/60 align-middle;
+  }
+
+  .surface {
+    @apply border border-line bg-ink-800;
+  }
+
+  .field {
+    @apply h-12 w-full appearance-none border border-line bg-ink-800/70 px-4 text-[0.9375rem] text-ivory
+           transition-colors duration-150 placeholder:text-ivory-500
+           hover:border-line-strong focus:border-champagne/60 focus:outline-none;
+  }
+
+  .field-light {
+    @apply h-12 w-full appearance-none border border-ink-900/15 bg-white px-4 text-[0.9375rem] text-ink
+           transition-colors duration-150 placeholder:text-ink-900/35
+           hover:border-ink-900/30 focus:border-champagne focus:outline-none;
+  }
+
+  .label {
+    @apply mb-2 block font-sans text-2xs uppercase tracking-wider text-ivory-500;
+  }
+
+  /* Fine grain overlay for large photographic areas */
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.22;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  .headline-xl {
+    @apply font-display font-semibold leading-[0.94] tracking-tightest;
+    font-size: clamp(2.75rem, 7.2vw, 6.5rem);
+  }
+  .headline-lg {
+    @apply font-display font-semibold leading-[0.98] tracking-tighter;
+    font-size: clamp(2.25rem, 4.6vw, 4rem);
+  }
+  .headline-md {
+    @apply font-display font-semibold leading-[1.04] tracking-tighter;
+    font-size: clamp(1.75rem, 3.1vw, 2.75rem);
+  }
+  .headline-sm {
+    @apply font-display font-semibold leading-[1.12] tracking-tight;
+    font-size: clamp(1.375rem, 2vw, 1.75rem);
+  }
+
+  .section-y { @apply py-20 md:py-28 lg:py-32; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
