@@ -27,39 +27,37 @@ export default function ImpressumPage() {
         <p>
           Telefon: {site.phone}
           <br />
-          E-Mail: {site.email}
+          E-Mail: {site.emailLabel}
         </p>
       </LegalSection>
 
       <LegalSection title="Vertretungsberechtigte">
         <p>
-          Geschäftsführung: M. Brandhoff, T. Weiler
-          <br />
-          Registergericht: Amtsgericht Hannover · HRB 000000 (fiktiv)
-          <br />
-          Umsatzsteuer-Identifikationsnummer: DE000000000 (fiktiv)
+          Rechtsform, Vertretungsberechtigte, Registereintrag und Umsatzsteuer-Identifikationsnummer werden vom
+          Betreiber ergänzt. In dieser Präsentationsfassung sind hierzu bewusst keine Angaben hinterlegt.
         </p>
       </LegalSection>
 
       <LegalSection title="Verantwortlich für den Inhalt">
         <p>
-          M. Brandhoff, Anschrift wie oben. Sämtliche Registerangaben dieser Demo sind erfunden und dienen
-          ausschließlich der Darstellung eines vollständigen Impressums.
+          Angabe wird vom Betreiber ergänzt, Anschrift wie oben. Dieses Impressum zeigt bislang nur die Struktur; die
+          rechtlich verbindlichen Pflichtangaben folgen vor dem Livegang.
         </p>
       </LegalSection>
 
       <LegalSection title="Streitbeilegung">
         <p>
-          Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit. Zur Teilnahme an einem
-          Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle wären wir weder verpflichtet noch bereit –
-          da es sich um ein Demonstrationsprojekt handelt, entstehen ohnehin keine Vertragsverhältnisse.
+          Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit. Da es sich hier um eine
+          Präsentationsfassung handelt, entstehen über diese Website keine Vertragsverhältnisse. Die verbindliche
+          Erklärung zur Verbraucherschlichtung wird vor dem Livegang ergänzt.
         </p>
       </LegalSection>
 
       <LegalSection title="Haftung für Inhalte und Links">
         <p>
-          Die Inhalte dieser Demo wurden mit Sorgfalt erstellt, erheben jedoch keinen Anspruch auf Richtigkeit oder
-          Vollständigkeit. Fahrzeugbeschreibungen, Verbrauchsangaben, Preise und Verfügbarkeiten sind frei erfunden.
+          Die Inhalte dieser Präsentationsfassung wurden mit Sorgfalt erstellt, erheben jedoch keinen Anspruch auf
+          Richtigkeit oder Vollständigkeit. Fahrzeugbeschreibungen, Verbrauchsangaben, Preise und Verfügbarkeiten sind
+          Demo-Daten.
         </p>
         <p>
           Für die Inhalte externer Links sind ausschließlich deren Betreiber verantwortlich. Zum Zeitpunkt der
@@ -70,7 +68,7 @@ export default function ImpressumPage() {
       <LegalSection title="Bildnachweis">
         <p>
           Die verwendeten Fahrzeugaufnahmen stammen aus frei lizenzierten Quellen. Sie zeigen Fahrzeuge des jeweiligen
-          Typs, jedoch nicht die hier beschriebenen fiktiven Einzelfahrzeuge.
+          Typs, jedoch nicht die hier beschriebenen Demo-Einzelfahrzeuge.
         </p>
         <ul className="mt-4 space-y-2 text-[0.8125rem] text-ivory-400">
           {imageCredits.map((c) => (

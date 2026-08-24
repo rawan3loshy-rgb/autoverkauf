@@ -182,7 +182,7 @@ await page.goto(`${BASE}/fahrzeuge`, { waitUntil: 'networkidle2' });
   await page.evaluate(() => [...document.querySelectorAll('button[type="submit"]')].pop()?.click());
   await wait(1600);
   const done = await text();
-  check('Kontakt: Bestätigung', done.includes('Vielen Dank.') && /#NM-\d{5}/.test(done), (done.match(/#NM-\d{5}/) || [''])[0]);
+  check('Kontakt: Bestätigung', done.includes('Vielen Dank.') && /#AK-\d{5}/.test(done), (done.match(/#AK-\d{5}/) || [''])[0]);
 }
 
 // --- Ankauf: mehrstufiges Formular ---------------------------------------
@@ -256,7 +256,7 @@ await page.goto(`${BASE}/fahrzeuge`, { waitUntil: 'networkidle2' });
   });
   await wait(1700);
   const done = await text();
-  check('Ankauf: Bestätigung', done.includes('Vielen Dank.') && done.toLowerCase().includes('ankaufsanfrage'), (done.match(/#NM-\d{5}/) || [''])[0]);
+  check('Ankauf: Bestätigung', done.includes('Vielen Dank.') && done.toLowerCase().includes('ankaufsanfrage'), (done.match(/#AK-\d{5}/) || [''])[0]);
 }
 
 // --- Inzahlungnahme -------------------------------------------------------

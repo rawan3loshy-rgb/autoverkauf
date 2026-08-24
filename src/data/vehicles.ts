@@ -1,7 +1,7 @@
 import type { Vehicle, VehicleImage } from '@/lib/types';
 
 /**
- * Demo-Bestand der NOVA MOTORS GmbH.
+ * Demo-Bestand für die Autokunst-Präsentation.
  *
  * Alle Fahrzeuge, Preise und Fahrzeughistorien sind fiktiv und dienen ausschließlich
  * der Demonstration. Verbrauchs- und Emissionsangaben sind Demo-Werte.
@@ -33,7 +33,7 @@ function gallery(slug: string, name: string, roles: Role[]): VehicleImage[] {
 
 export const vehicles: Vehicle[] = [
   {
-    id: 'NM-1042',
+    id: 'AK-1042',
     slug: 'porsche-911-carrera-4-gts',
     brand: 'Porsche',
     model: '911',
@@ -110,7 +110,7 @@ export const vehicles: Vehicle[] = [
     location: 'Hannover',
   },
   {
-    id: 'NM-1038',
+    id: 'AK-1038',
     slug: 'mercedes-amg-g-63',
     brand: 'Mercedes-Benz',
     model: 'G-Klasse',
@@ -181,7 +181,7 @@ export const vehicles: Vehicle[] = [
     location: 'Hannover',
   },
   {
-    id: 'NM-1051',
+    id: 'AK-1051',
     slug: 'bmw-m4-competition-xdrive',
     brand: 'BMW',
     model: 'M4',
@@ -252,7 +252,7 @@ export const vehicles: Vehicle[] = [
     location: 'Hannover',
   },
   {
-    id: 'NM-1029',
+    id: 'AK-1029',
     slug: 'audi-rs-6-avant-performance',
     brand: 'Audi',
     model: 'RS 6',
@@ -330,7 +330,7 @@ export const vehicles: Vehicle[] = [
     location: 'Hannover',
   },
   {
-    id: 'NM-1017',
+    id: 'AK-1017',
     slug: 'bmw-x5-m-competition',
     brand: 'BMW',
     model: 'X5 M',
@@ -401,7 +401,7 @@ export const vehicles: Vehicle[] = [
     location: 'Hannover',
   },
   {
-    id: 'NM-1063',
+    id: 'AK-1063',
     slug: 'mercedes-amg-gt-63-s',
     brand: 'Mercedes-Benz',
     model: 'AMG GT',
@@ -472,7 +472,7 @@ export const vehicles: Vehicle[] = [
     location: 'Hannover',
   },
   {
-    id: 'NM-1074',
+    id: 'AK-1074',
     slug: 'porsche-taycan-4s',
     brand: 'Porsche',
     model: 'Taycan',
@@ -548,7 +548,7 @@ export const vehicles: Vehicle[] = [
     location: 'Hannover',
   },
   {
-    id: 'NM-1008',
+    id: 'AK-1008',
     slug: 'range-rover-sport-d350',
     brand: 'Land Rover',
     model: 'Range Rover Sport',
@@ -619,7 +619,7 @@ export const vehicles: Vehicle[] = [
     location: 'Hannover',
   },
   {
-    id: 'NM-1091',
+    id: 'AK-1091',
     slug: 'land-rover-defender-110-d300',
     brand: 'Land Rover',
     model: 'Defender 110',
@@ -684,7 +684,7 @@ export const vehicles: Vehicle[] = [
     location: 'Hannover',
   },
   {
-    id: 'NM-0994',
+    id: 'AK-0994',
     slug: 'vw-touareg-r-line-v6-tdi',
     brand: 'Volkswagen',
     model: 'Touareg',
@@ -754,7 +754,7 @@ export const vehicles: Vehicle[] = [
     location: 'Hannover',
   },
   {
-    id: 'NM-1085',
+    id: 'AK-1085',
     slug: 'bmw-530e-limousine-m-sport',
     brand: 'BMW',
     model: '5er',
@@ -818,7 +818,7 @@ export const vehicles: Vehicle[] = [
     location: 'Hannover',
   },
   {
-    id: 'NM-1002',
+    id: 'AK-1002',
     slug: 'mercedes-e-220-d-t-modell',
     brand: 'Mercedes-Benz',
     model: 'E-Klasse',
@@ -882,7 +882,7 @@ export const vehicles: Vehicle[] = [
     location: 'Hannover',
   },
   {
-    id: 'NM-1056',
+    id: 'AK-1056',
     slug: 'audi-q5-55-tfsi-e-quattro',
     brand: 'Audi',
     model: 'Q5',
@@ -953,7 +953,7 @@ export const vehicles: Vehicle[] = [
     location: 'Hannover',
   },
   {
-    id: 'NM-1023',
+    id: 'AK-1023',
     slug: 'bmw-430i-cabrio-m-sport',
     brand: 'BMW',
     model: '4er',
@@ -1011,7 +1011,7 @@ export const vehicles: Vehicle[] = [
     location: 'Hannover',
   },
   {
-    id: 'NM-0987',
+    id: 'AK-0987',
     slug: 'audi-a6-avant-45-tfsi-quattro',
     brand: 'Audi',
     model: 'A6',
@@ -1081,7 +1081,7 @@ export const vehicles: Vehicle[] = [
     location: 'Hannover',
   },
   {
-    id: 'NM-1067',
+    id: 'AK-1067',
     slug: 'vw-golf-gti-clubsport',
     brand: 'Volkswagen',
     model: 'Golf',

@@ -47,6 +47,7 @@ export function ShowroomSection() {
                   </div>
                 ))}
               </dl>
+              <p className="mt-3 text-[0.8125rem] text-ivory-500">{site.hoursNote}</p>
             </div>
 
             <Link

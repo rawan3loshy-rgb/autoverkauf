@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getVehicleSlugs } from '@/lib/vehicle-repository';
 
-const BASE = 'https://nova-motors.de';
+const BASE = 'https://autokunst.de';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = ['', '/fahrzeuge', '/ankauf', '/finanzierung', '/ueber-uns', '/kontakt'].map((path) => ({

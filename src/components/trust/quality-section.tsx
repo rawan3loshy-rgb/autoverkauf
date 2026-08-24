@@ -44,7 +44,7 @@ export function QualitySection() {
           <Reveal delay={80} className="relative aspect-[4/3] w-full overflow-hidden lg:col-span-5 lg:aspect-auto">
             <Image
               src="/editorial/qualitaet.jpg"
-              alt="Fahrzeugprüfung in der Partnerwerkstatt von NOVA MOTORS"
+              alt="Fahrzeugprüfung in der Partnerwerkstatt von Autokunst"
               fill
               sizes="(max-width: 1024px) 100vw, 40vw"
               className="object-cover"

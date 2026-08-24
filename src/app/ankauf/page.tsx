@@ -10,7 +10,7 @@ import { site } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'Fahrzeugankauf',
   description:
-    'Fahrzeug verkaufen oder in Zahlung geben: Beschreiben Sie Ihr Fahrzeug in vier Schritten und erhalten Sie eine Einschätzung von NOVA MOTORS in Hannover.',
+    'Fahrzeug verkaufen oder in Zahlung geben: Beschreiben Sie Ihr Fahrzeug in vier Schritten und erhalten Sie eine Einschätzung von Autokunst in Hannover.',
 };
 
 const ADVANTAGES = [
@@ -91,7 +91,7 @@ export default async function AnkaufPage({
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src="/editorial/ankauf-portrait.jpg"
-                    alt="Fahrzeugbewertung bei NOVA MOTORS"
+                    alt="Fahrzeugbewertung bei Autokunst"
                     fill
                     sizes="(max-width: 1024px) 100vw, 33vw"
                     className="object-cover"

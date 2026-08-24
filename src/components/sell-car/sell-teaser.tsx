@@ -28,7 +28,7 @@ export function SellTeaser() {
       <div className="absolute inset-0">
         <Image
           src="/editorial/ankauf.jpg"
-          alt="Fahrzeugübergabe bei NOVA MOTORS"
+          alt="Fahrzeugübergabe bei Autokunst"
           fill
           sizes="100vw"
           className="object-cover object-center"

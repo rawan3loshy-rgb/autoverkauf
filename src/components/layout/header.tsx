@@ -50,7 +50,7 @@ export function Header() {
               scrolled ? 'h-[60px]' : 'h-[76px] md:h-[88px]',
             )}
           >
-            <Link href="/" className="shrink-0 text-ivory transition-opacity hover:opacity-80" aria-label="NOVA MOTORS — Startseite">
+            <Link href="/" className="shrink-0 text-ivory transition-opacity hover:opacity-80" aria-label="Autokunst — Startseite">
               <Wordmark />
             </Link>
 
@@ -143,7 +143,7 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="container mt-auto pb-10 pt-8">
+          <div className="container mt-auto pb-24 pt-8">
             <Link
               href="/ankauf"
               className="flex h-14 w-full items-center justify-center bg-ivory text-[0.8125rem] font-medium uppercase tracking-wider text-ink-900"

@@ -11,7 +11,7 @@ import { fullName } from '@/lib/vehicle-utils';
 export const metadata: Metadata = {
   title: 'Finanzierung & Leasing',
   description:
-    'Finanzierung, Leasing und Inzahlungnahme bei NOVA MOTORS. Beispielrechnung mit Anzahlung, Laufzeit und optionaler Schlussrate.',
+    'Finanzierung, Leasing und Inzahlungnahme bei Autokunst. Beispielrechnung mit Anzahlung, Laufzeit und optionaler Schlussrate.',
 };
 
 const FAQ = [

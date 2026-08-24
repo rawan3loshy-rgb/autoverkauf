@@ -48,11 +48,7 @@ export function Footer() {
               <p>
                 {site.zip} {site.city}
               </p>
-              <p className="pt-2">
-                <a href={`mailto:${site.email}`} className="transition-colors hover:text-ivory">
-                  {site.email}
-                </a>
-              </p>
+              <p className="pt-2 text-ivory-400">{site.emailLabel}</p>
             </address>
             <div className="mt-5 space-y-1 text-sm text-ivory-500">
               {site.hours.slice(0, 2).map((h) => (
@@ -60,13 +56,14 @@ export function Footer() {
                   {h.days} · {h.time}
                 </p>
               ))}
+              <p className="pt-1 text-xs text-ivory-500">{site.hoursNote}</p>
             </div>
           </div>
         </div>
 
         <div className="mt-14 flex flex-col gap-5 border-t border-line pt-7 md:flex-row md:items-center md:justify-between">
           <p className="text-xs text-ivory-500">
-            © {new Date().getFullYear()} {site.legalName} · Demonstrationsprojekt mit fiktiven Fahrzeugdaten
+            © {new Date().getFullYear()} {site.legalName} · Präsentationsdemo mit fiktiven Fahrzeugdaten
           </p>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
             {legal.map((item) => (

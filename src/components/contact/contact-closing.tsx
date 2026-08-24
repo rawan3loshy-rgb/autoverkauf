@@ -25,14 +25,13 @@ export function ContactClosing() {
             label="Telefon"
             value={site.phone}
             href={site.phoneHref}
-            hint="Mo–Fr 09:00–18:00 Uhr"
+            hint="Termine nach Absprache"
           />
           <ContactTile
             icon={Mail}
             label="E-Mail"
-            value={site.email}
-            href={`mailto:${site.email}`}
-            hint="Antwort innerhalb eines Werktages"
+            value={site.emailLabel}
+            hint="Anfragen über das Kontaktformular"
           />
           <ContactTile
             icon={MapPin}

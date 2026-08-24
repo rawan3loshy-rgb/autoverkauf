@@ -29,8 +29,8 @@ export function numberInRange(
   return undefined;
 }
 
-/** Erzeugt eine Vorgangsnummer im Format NM-48217. */
-export function referenceNumber(prefix = 'NM'): string {
+/** Erzeugt eine Vorgangsnummer im Format AK-48217. */
+export function referenceNumber(prefix = 'AK'): string {
   const n = 10000 + Math.floor(Math.random() * 89999);
   return `${prefix}-${n}`;
 }
@@ -50,7 +50,7 @@ export function digitsOf(value: string): number {
 export function submitDemo<T>(payload: T, ms = 850): Promise<{ ok: true; payload: T }> {
   if (process.env.NODE_ENV === 'development') {
     // Hilft beim Prüfen der Demo, ohne dass Daten das Gerät verlassen.
-    console.info('[NOVA MOTORS Demo] Formular abgesendet:', payload);
+    console.info('[Autokunst Demo] Formular abgesendet:', payload);
   }
   return new Promise((resolve) => setTimeout(() => resolve({ ok: true, payload }), ms));
 }

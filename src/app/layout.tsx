@@ -21,18 +21,19 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://nova-motors.de'),
+  // Platzhalter-Domain – wird auf die spätere Live-Domain von Autokunst gesetzt.
+  metadataBase: new URL('https://autokunst.de'),
   title: {
-    default: 'NOVA MOTORS — Automobile mit Charakter.',
-    template: '%s | NOVA MOTORS',
+    default: 'Autokunst — Automobile mit Charakter.',
+    template: '%s | Autokunst',
   },
   description:
-    'Ausgewählte Gebrauchtwagen, geprüfte Qualität und persönliche Beratung. NOVA MOTORS in Hannover kauft und verkauft Fahrzeuge deutschlandweit.',
+    'Ausgewählte Gebrauchtwagen, geprüfte Qualität und persönliche Beratung. Autokunst in Hannover kauft und verkauft Fahrzeuge deutschlandweit.',
   openGraph: {
     type: 'website',
     locale: 'de_DE',
-    siteName: 'NOVA MOTORS',
-    title: 'NOVA MOTORS — Automobile mit Charakter.',
+    siteName: 'Autokunst',
+    title: 'Autokunst — Automobile mit Charakter.',
     description: 'Ausgewählte Fahrzeuge. Geprüfte Qualität. Persönliche Beratung.',
   },
 };
@@ -67,7 +68,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@type': 'AutoDealer',
               name: site.legalName,
               telephone: site.phone,
-              email: site.email,
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: site.street,

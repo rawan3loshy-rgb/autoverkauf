@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-const UA = 'NovaMotorsDemo/1.0 (educational demo; contact: demo@example.com)';
+const UA = 'AutokunstDemo/1.0 (educational demo; contact: demo@example.com)';
 const queries = JSON.parse(await fs.readFile('scripts/queries.json', 'utf8'));
 const OUT = 'scripts/.cache';
 await fs.mkdir(OUT, { recursive: true });

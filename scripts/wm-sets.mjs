@@ -11,7 +11,7 @@ import path from 'node:path';
 import sharp from 'sharp';
 import { throttledFetch, exists, stats } from './lib-download.mjs';
 
-const API_UA = { 'User-Agent': 'NovaMotorsDemo/1.0 (Designdemo; kontakt@example.com)' };
+const API_UA = { 'User-Agent': 'AutokunstDemo/1.0 (Designdemo; kontakt@example.com)' };
 const QUERIES = JSON.parse(await fs.readFile(process.env.QUERIES || 'scripts/set-queries.json', 'utf8'));
 const CACHE = process.env.CACHE_DIR || 'scripts/.cache/sets';
 const MANIFEST = process.env.SETS_MANIFEST || 'scripts/.cache/sets-manifest.json';

@@ -16,8 +16,8 @@ export default function DatenschutzPage() {
     >
       <LegalSection title="Verantwortlicher">
         <p>
-          {site.legalName}, {site.street}, {site.zip} {site.city}. Kontakt: {site.email}, {site.phone}. Es handelt sich
-          um ein fiktives Unternehmen im Rahmen einer Designdemonstration.
+          {site.legalName}, {site.street}, {site.zip} {site.city}. Kontakt: {site.phone}. Die vollständigen
+          Pflichtangaben werden vor dem Livegang ergänzt.
         </p>
       </LegalSection>
 

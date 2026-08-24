@@ -6,7 +6,7 @@ import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Kontakt',
-  description: `NOVA MOTORS in ${site.city}: Telefon ${site.phone}, ${site.email}. Probefahrt, Beratung, Finanzierung und Ankauf – wir melden uns innerhalb eines Werktages.`,
+  description: `Autokunst in ${site.city}: Telefon ${site.phone}, ${site.street}, ${site.zip} ${site.city}. Probefahrt, Beratung, Finanzierung und Ankauf – wir melden uns innerhalb eines Werktages.`,
 };
 
 export default async function KontaktPage({
@@ -46,10 +46,8 @@ export default async function KontaktPage({
                   </Item>
 
                   <Item icon={Mail} label="E-Mail">
-                    <a href={`mailto:${site.email}`} className="text-[0.9375rem] text-ivory transition-colors hover:text-champagne">
-                      {site.email}
-                    </a>
-                    <p className="mt-1.5 text-[0.8125rem] text-ivory-500">Antwort innerhalb eines Werktages</p>
+                    <p className="text-[0.9375rem] text-ivory">{site.emailLabel}</p>
+                    <p className="mt-1.5 text-[0.8125rem] text-ivory-500">Anfragen über das Formular oder telefonisch</p>
                   </Item>
 
                   <Item icon={MapPin} label="Showroom">
@@ -71,13 +69,14 @@ export default async function KontaktPage({
                         </div>
                       ))}
                     </dl>
+                    <p className="mt-2 text-[0.8125rem] text-ivory-500">{site.hoursNote}</p>
                   </Item>
                 </div>
 
                 <div className="border-t border-line bg-ink-800/60 px-6 py-5 md:px-8">
                   <p className="text-[0.8125rem] leading-relaxed text-ivory-400">
-                    Anfahrt: Aus der Innenstadt über die Hildesheimer Straße Richtung Süden, Parkplätze befinden sich
-                    direkt am Gebäude. Besichtigungen außerhalb der Öffnungszeiten sind nach Absprache möglich.
+                    Sie finden uns in der {site.street} in {site.zip} {site.city}. Besichtigungen und Probefahrten
+                    stimmen wir gerne individuell mit Ihnen ab – rufen Sie uns dafür einfach kurz an.
                   </p>
                 </div>
               </div>

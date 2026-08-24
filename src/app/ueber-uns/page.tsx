@@ -10,7 +10,7 @@ import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Über uns',
-  description: `NOVA MOTORS aus ${site.city}: Ankauf und Verkauf ausgewählter Gebrauchtwagen seit über 15 Jahren. Geprüfte Fahrzeuge, dokumentierte Historie, persönliche Beratung.`,
+  description: `Autokunst aus ${site.city}: Ankauf und Verkauf ausgewählter Gebrauchtwagen. Geprüfte Fahrzeuge, dokumentierte Historie, persönliche Beratung.`,
 };
 
 const PRINCIPLES = [
@@ -34,7 +34,7 @@ export default function UeberUnsPage() {
       <PageHeader
         eyebrow="Über uns"
         title="Automobile mit Charakter."
-        lead="NOVA MOTORS ist ein inhabergeführter Fahrzeughandel in Hannover. Wir kaufen und verkaufen ausgewählte Fahrzeuge – seit über 15 Jahren, mit einem kleinen Team und einem klaren Anspruch."
+        lead="Autokunst ist ein inhabergeführter Fahrzeughandel in Hannover. Wir kaufen und verkaufen ausgewählte Fahrzeuge – mit einem kleinen Team und einem klaren Anspruch."
       />
 
       <section className="bg-ink-900 py-16 md:py-24">
@@ -43,11 +43,11 @@ export default function UeberUnsPage() {
             <Reveal className="lg:col-span-6">
               <p className="eyebrow lead-rule">Unser Weg</p>
               <h2 className="headline-md mt-5 text-ivory">
-                Aus einer Halle in der Südstadt wurde ein Bestand mit Handschrift.
+                Aus einer kleinen Halle wurde ein Bestand mit Handschrift.
               </h2>
               <div className="mt-7 space-y-5 text-pretty text-[1.0625rem] leading-relaxed text-ivory-300">
                 <p>
-                  Angefangen haben wir 2011 mit vier Stellplätzen und dem Anspruch, Fahrzeuge so zu verkaufen, wie wir
+                  Angefangen haben wir mit wenigen Stellplätzen und dem Anspruch, Fahrzeuge so zu verkaufen, wie wir
                   sie selbst kaufen würden: vollständig dokumentiert, technisch geprüft und ohne Überraschungen nach der
                   Übergabe.
                 </p>

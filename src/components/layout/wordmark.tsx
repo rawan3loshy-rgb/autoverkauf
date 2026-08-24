@@ -27,8 +27,8 @@ export function Wordmark({
     <span className={cn('inline-flex items-center gap-2.5 leading-none', className)}>
       <Mark className={cn('text-champagne', markClassName)} />
       <span className="font-display text-[0.95rem] font-semibold uppercase leading-none tracking-[0.16em]">
-        Nova
-        <span className={cn('font-normal tracking-[0.16em]', compact ? 'hidden sm:inline' : '')}> Motors</span>
+        Auto
+        <span className={cn('font-normal tracking-[0.16em]', compact ? 'tracking-[0.12em]' : '')}>kunst</span>
       </span>
     </span>
   );

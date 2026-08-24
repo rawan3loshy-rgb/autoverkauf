@@ -21,9 +21,9 @@ export function LegalShell({
             <div className="mb-12 flex gap-3 border border-champagne/25 bg-champagne/[0.06] p-5">
               <Info className="mt-0.5 h-4 w-4 shrink-0 text-champagne" strokeWidth={1.5} />
               <p className="text-[0.875rem] leading-relaxed text-ivory-300">
-                Diese Website ist ein Demonstrationsprojekt. Die NOVA MOTORS GmbH ist ein fiktives Unternehmen,
-                sämtliche Fahrzeuge, Preise, Personen und Registerangaben sind erfunden. Es kommt kein Vertrag zustande
-                und es werden keine Daten verarbeitet.
+                Diese Website ist eine Präsentationsfassung für Autokunst. Sämtliche Fahrzeuge, Preise und
+                Verfügbarkeiten sind Demo-Daten, die rechtlichen Pflichtangaben sind noch nicht hinterlegt. Es kommt
+                kein Vertrag zustande und es werden keine Daten verarbeitet.
               </p>
             </div>
             <div className="space-y-10">{children}</div>
