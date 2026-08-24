@@ -16,7 +16,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-12 md:gap-8">
           <div className="md:col-span-5">
             <Link href="/" className="inline-block text-ivory">
-              <Wordmark />
+              <Wordmark className="h-11 md:h-12" />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ivory-400">{site.tagline}</p>
             <a

@@ -51,7 +51,7 @@ export function Header() {
             )}
           >
             <Link href="/" className="shrink-0 text-ivory transition-opacity hover:opacity-80" aria-label="Autokunst — Startseite">
-              <Wordmark />
+              <Wordmark priority />
             </Link>
 
             <nav className="hidden items-center gap-9 lg:flex" aria-label="Hauptnavigation">
