@@ -1,11 +1,15 @@
 import { Reveal } from '@/components/ui/reveal';
 import { cn } from '@/lib/utils';
 
+/**
+ * Bewusst ohne Kennzahlen: Verkaufszahlen, Bewertungen und Jahresangaben liegen für
+ * Autokunst nicht belastbar vor. Das Band zeigt stattdessen die vier Leistungsbereiche.
+ */
 const STATS = [
-  { value: '15+', label: 'Jahre Erfahrung' },
-  { value: '500+', label: 'Fahrzeuge verkauft' },
-  { value: '4,9 / 5', label: 'Kundenbewertung' },
-  { value: 'Deutschlandweit', label: 'Fahrzeugankauf' },
+  { value: 'An- & Verkauf', label: 'Fahrzeughandel' },
+  { value: 'Aufbereitung', label: 'Innenraum, Außen & Lack' },
+  { value: 'Leasingrückgabe', label: 'Professionell vorbereitet' },
+  { value: 'mobile.de', label: 'Offizielle Händlerseite' },
 ];
 
 export function StatsBand({ tone = 'light' }: { tone?: 'light' | 'dark' }) {
@@ -18,7 +22,7 @@ export function StatsBand({ tone = 'light' }: { tone?: 'light' | 'dark' }) {
             <Reveal key={s.label} delay={i * 60}>
               <dd
                 className={cn(
-                  'tnum font-display text-[1.75rem] font-semibold leading-none tracking-tighter md:text-[2.125rem]',
+                  'font-display text-[1.375rem] font-semibold leading-tight tracking-tight md:text-[1.75rem]',
                   light ? 'text-ink-900' : 'text-ivory',
                 )}
               >

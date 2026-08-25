@@ -10,7 +10,6 @@ import { PurchasePanel } from '@/components/vehicle-detail/purchase-panel';
 import { SpecTable } from '@/components/vehicle-detail/spec-table';
 import { FeatureList } from '@/components/vehicle-detail/feature-list';
 import { VehicleInquiry } from '@/components/vehicle-detail/vehicle-inquiry';
-import { FinanceCalculator } from '@/components/financing/finance-calculator';
 import { VehicleCard } from '@/components/vehicles/vehicle-card';
 
 export function generateStaticParams() {
@@ -116,26 +115,6 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
           </div>
         </div>
       </div>
-
-      {/* Finanzierung */}
-      {vehicle.status !== 'Verkauft' && (
-        <section className="border-t border-line bg-ink-850 py-20 md:py-24">
-          <div className="container">
-            <p className="eyebrow lead-rule">Finanzierung</p>
-            <h2 className="headline-md mt-4 max-w-2xl text-ivory">
-              Beispielrechnung für dieses Fahrzeug.
-            </h2>
-            <div className="mt-10">
-              <FinanceCalculator
-                price={vehicle.price}
-                vehicleLabel={name}
-                tone="dark"
-                requestHref={`/kontakt?anlass=finanzierung&fahrzeug=${vehicle.slug}`}
-              />
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* Ähnliche Fahrzeuge */}
       {similar.length > 0 && (

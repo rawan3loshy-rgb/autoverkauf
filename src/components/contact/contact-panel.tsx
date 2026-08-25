@@ -7,7 +7,8 @@ import { fullName } from '@/lib/vehicle-utils';
 const MAP: Record<string, Topic> = {
   kauf: 'kauf',
   probefahrt: 'probefahrt',
-  finanzierung: 'finanzierung',
+  aufbereitung: 'aufbereitung',
+  leasingrueckgabe: 'leasingrueckgabe',
   inzahlungnahme: 'inzahlungnahme',
   termin: 'termin',
   suchauftrag: 'suchauftrag',
@@ -15,7 +16,8 @@ const MAP: Record<string, Topic> = {
 
 const TITLES: Partial<Record<Topic, string>> = {
   termin: 'Termin im Showroom vereinbaren',
-  finanzierung: 'Finanzierung anfragen',
+  aufbereitung: 'Aufbereitung anfragen',
+  leasingrueckgabe: 'Leasingrückgabe vorbereiten',
   suchauftrag: 'Suchauftrag aufgeben',
   probefahrt: 'Probefahrt vereinbaren',
 };

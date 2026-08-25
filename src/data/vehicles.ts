@@ -107,7 +107,7 @@ export const vehicles: Vehicle[] = [
         items: ['Porsche Communication Management', 'BOSE Surround Sound-System', 'Apple CarPlay', 'Navigation', 'DAB-Tuner'],
       },
     ],
-    location: 'Hannover',
+    location: 'Langenhagen',
   },
   {
     id: 'AK-1038',
@@ -178,7 +178,7 @@ export const vehicles: Vehicle[] = [
         items: ['MBUX mit Widescreen Cockpit', 'Burmester Surround Soundsystem', 'Apple CarPlay & Android Auto', 'Head-up-Display'],
       },
     ],
-    location: 'Hannover',
+    location: 'Langenhagen',
   },
   {
     id: 'AK-1051',
@@ -249,7 +249,7 @@ export const vehicles: Vehicle[] = [
         items: ['BMW Live Cockpit Professional', 'Harman Kardon Surround Sound', 'Head-up-Display', 'Apple CarPlay & Android Auto'],
       },
     ],
-    location: 'Hannover',
+    location: 'Langenhagen',
   },
   {
     id: 'AK-1029',
@@ -327,7 +327,7 @@ export const vehicles: Vehicle[] = [
         items: ['MMI Navigation plus', 'Bang & Olufsen Advanced Sound System', 'Audi virtual cockpit plus', 'Head-up-Display'],
       },
     ],
-    location: 'Hannover',
+    location: 'Langenhagen',
   },
   {
     id: 'AK-1017',
@@ -398,7 +398,7 @@ export const vehicles: Vehicle[] = [
         items: ['BMW Live Cockpit Professional', 'Bowers & Wilkins Diamond Surround', 'Head-up-Display', 'Gestiksteuerung'],
       },
     ],
-    location: 'Hannover',
+    location: 'Langenhagen',
   },
   {
     id: 'AK-1063',
@@ -469,7 +469,7 @@ export const vehicles: Vehicle[] = [
         items: ['MBUX Widescreen Cockpit', 'Burmester High-End 3D Surround', 'Head-up-Display', 'Apple CarPlay & Android Auto'],
       },
     ],
-    location: 'Hannover',
+    location: 'Langenhagen',
   },
   {
     id: 'AK-1074',
@@ -545,7 +545,7 @@ export const vehicles: Vehicle[] = [
         items: ['Porsche Communication Management', 'BOSE Surround Sound-System', 'Apple CarPlay', 'Porsche Connect'],
       },
     ],
-    location: 'Hannover',
+    location: 'Langenhagen',
   },
   {
     id: 'AK-1008',
@@ -616,7 +616,7 @@ export const vehicles: Vehicle[] = [
         items: ['Pivi Pro Navigationssystem', 'Meridian Sound System', 'Head-up-Display', 'Apple CarPlay kabellos'],
       },
     ],
-    location: 'Hannover',
+    location: 'Langenhagen',
   },
   {
     id: 'AK-1091',
@@ -681,7 +681,7 @@ export const vehicles: Vehicle[] = [
         items: ['Pivi Pro Navigationssystem', 'Meridian Sound System', 'Apple CarPlay & Android Auto', 'Digitales Kombiinstrument'],
       },
     ],
-    location: 'Hannover',
+    location: 'Langenhagen',
   },
   {
     id: 'AK-0994',
@@ -751,7 +751,7 @@ export const vehicles: Vehicle[] = [
         items: ['Innovision Cockpit', 'Dynaudio Consequence Soundsystem', 'Head-up-Display', 'App-Connect kabellos'],
       },
     ],
-    location: 'Hannover',
+    location: 'Langenhagen',
   },
   {
     id: 'AK-1085',
@@ -815,7 +815,7 @@ export const vehicles: Vehicle[] = [
         items: ['BMW Live Cockpit Professional', 'Harman Kardon Surround Sound', 'Head-up-Display', 'Apple CarPlay & Android Auto'],
       },
     ],
-    location: 'Hannover',
+    location: 'Langenhagen',
   },
   {
     id: 'AK-1002',
@@ -879,7 +879,7 @@ export const vehicles: Vehicle[] = [
         items: ['MBUX Widescreen Cockpit', 'Navigation Premium', 'Apple CarPlay & Android Auto', 'DAB-Radio'],
       },
     ],
-    location: 'Hannover',
+    location: 'Langenhagen',
   },
   {
     id: 'AK-1056',
@@ -950,7 +950,7 @@ export const vehicles: Vehicle[] = [
         items: ['MMI Navigation plus', 'Audi virtual cockpit plus', 'Audi Sound System', 'Apple CarPlay & Android Auto'],
       },
     ],
-    location: 'Hannover',
+    location: 'Langenhagen',
   },
   {
     id: 'AK-1023',
@@ -1008,7 +1008,7 @@ export const vehicles: Vehicle[] = [
         items: ['BMW Live Cockpit Professional', 'Harman Kardon Surround Sound', 'Apple CarPlay & Android Auto', 'DAB-Tuner'],
       },
     ],
-    location: 'Hannover',
+    location: 'Langenhagen',
   },
   {
     id: 'AK-0987',
@@ -1078,7 +1078,7 @@ export const vehicles: Vehicle[] = [
         items: ['MMI Navigation plus', 'Bang & Olufsen 3D Soundsystem', 'Audi virtual cockpit plus', 'Head-up-Display'],
       },
     ],
-    location: 'Hannover',
+    location: 'Langenhagen',
   },
   {
     id: 'AK-1067',
@@ -1148,7 +1148,7 @@ export const vehicles: Vehicle[] = [
         items: ['Discover Pro Navigationssystem', 'Harman Kardon Soundsystem', 'App-Connect kabellos', 'DAB+'],
       },
     ],
-    location: 'Hannover',
+    location: 'Langenhagen',
   },
 ];
 

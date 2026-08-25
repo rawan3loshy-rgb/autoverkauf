@@ -12,8 +12,11 @@ export const site = {
   emailLabel: 'E-Mail auf Anfrage',
   street: 'Ikarusallee 2',
   zip: '30179',
-  city: 'Hannover',
+  city: 'Langenhagen',
+  region: 'Region Hannover',
   country: 'Deutschland',
+  /** Offizielle Händlerseite – der gepflegte Bestand liegt weiterhin dort. */
+  mobileDe: 'https://home.mobile.de/AUTOKUNSTLANGENHAGENLANGENHAGEN',
   /** Demo-Zeiten für die Präsentation – noch nicht vom Betreiber bestätigt. */
   hours: [
     { days: 'Montag – Freitag', time: '09:00 – 18:00 Uhr' },
@@ -27,7 +30,7 @@ export const site = {
 export const nav = [
   { label: 'Fahrzeuge', href: '/fahrzeuge' },
   { label: 'Ankauf', href: '/ankauf' },
-  { label: 'Finanzierung', href: '/finanzierung' },
+  { label: 'Aufbereitung', href: '/aufbereitung' },
   { label: 'Über uns', href: '/ueber-uns' },
   { label: 'Kontakt', href: '/kontakt' },
 ] as const;

@@ -36,7 +36,7 @@ const text = () => page.evaluate(() => document.body.innerText);
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
 // --- Seiten erreichbar ---------------------------------------------------
-for (const path of ['/', '/fahrzeuge', '/ankauf', '/finanzierung', '/ueber-uns', '/kontakt', '/impressum', '/datenschutz', '/agb']) {
+for (const path of ['/', '/fahrzeuge', '/ankauf', '/aufbereitung', '/ueber-uns', '/kontakt', '/impressum', '/datenschutz', '/agb']) {
   const res = await page.goto(BASE + path, { waitUntil: 'domcontentloaded' });
   check(`Seite ${path}`, res?.status() === 200, `HTTP ${res?.status()}`);
 }
@@ -266,26 +266,66 @@ await page.goto(`${BASE}/fahrzeuge`, { waitUntil: 'networkidle2' });
   check('Inzahlungnahme-Variante', body.includes('auf ihren kaufpreis angerechnet') && body.includes('inzahlungnahme'));
 }
 
-// --- Finanzierungsrechner -------------------------------------------------
+// --- Fahrzeugaufbereitung -------------------------------------------------
 {
-  await page.goto(`${BASE}/finanzierung`, { waitUntil: 'networkidle2' });
-  await wait(800);
-  const rateBefore = await page.evaluate(() => document.body.innerText.match(/([\d.]+)\s*€\s*ab, bei/)?.[1]);
-  await page.evaluate(() => {
-    const b = [...document.querySelectorAll('button')].find((x) => x.textContent.trim() === '72 Monate');
-    b?.click();
-  });
-  await wait(700);
-  const rateAfter = await page.evaluate(() => document.body.innerText.match(/([\d.]+)\s*€\s*ab, bei/)?.[1]);
-  check('Rechner: Laufzeit wirkt', rateBefore !== rateAfter, `${rateBefore} -> ${rateAfter}`);
+  await page.goto(`${BASE}/aufbereitung`, { waitUntil: 'networkidle2' });
+  await wait(900); // Radix setzt role="combobox" erst nach der Hydration.
+  const body = await text();
+  check('Aufbereitung: Leistungen', ['Innenraum', 'Außenbereich', 'Lack & Politur', 'Leasingrückgabe'].every((t) => body.includes(t)));
+  check('Aufbereitung: Leasingrückgabe-Block', body.includes('Leasingrückgabe steht bevor?'));
+  check(
+    'Aufbereitung: keine Leasing-Garantie',
+    !/garant|kostenlos übernommen|ohne Nachzahlung/i.test(body) && body.includes('liegt beim Leasinggeber'),
+  );
+  check('Aufbereitung: Anfrageformular', body.includes('Aufbereitung anfragen'));
 
-  await page.evaluate(() => {
-    const b = [...document.querySelectorAll('button')].find((x) => x.textContent.includes('3-Wege'));
-    b?.click();
-  });
-  await wait(700);
-  check('Rechner: Schlussrate erscheint', (await text()).includes('Schlussrate'));
-  check('Rechner: Demo-Hinweis', (await text()).includes('Unverbindliche Beispielrechnung'));
+  await page.waitForSelector('[role="combobox"]', { timeout: 8000 }).catch(() => {});
+  const topic = await page.$eval('[role="combobox"]', (el) => el.textContent.trim()).catch(() => null);
+  check('Aufbereitung: Formular vorbelegt', topic === 'Fahrzeugaufbereitung', String(topic));
+}
+
+// --- Finanzierung ist entfernt --------------------------------------------
+{
+  const res = await page.goto(`${BASE}/finanzierung`, { waitUntil: 'domcontentloaded' });
+  check('Finanzierung entfernt', res?.status() === 404, `HTTP ${res?.status()}`);
+
+  await page.goto(BASE, { waitUntil: 'networkidle2' });
+  const home = await text();
+  check('Startseite ohne Finanzierung', !/Finanzierung|Schlussrate|Leasingrate/i.test(home));
+  check('Startseite mit Aufbereitung', home.includes('Perfekt vorbereitet.'));
+}
+
+// --- mobile.de ------------------------------------------------------------
+{
+  await page.goto(BASE, { waitUntil: 'networkidle2' });
+  const links = await page.evaluate(() =>
+    [...document.querySelectorAll('a[href*="home.mobile.de"]')].map((a) => ({
+      href: a.getAttribute('href'),
+      target: a.getAttribute('target'),
+      rel: a.getAttribute('rel'),
+    })),
+  );
+  check('mobile.de: CTA vorhanden', links.length >= 1, `${links.length} Link(s)`);
+  check(
+    'mobile.de: korrekte Händler-URL',
+    links.every((l) => l.href === 'https://home.mobile.de/AUTOKUNSTLANGENHAGENLANGENHAGEN'),
+    links[0]?.href ?? '-',
+  );
+  check('mobile.de: neuer Tab', links.every((l) => l.target === '_blank'), links[0]?.target ?? '-');
+  check(
+    'mobile.de: rel-Attribute',
+    links.every((l) => (l.rel || '').includes('noreferrer') && (l.rel || '').includes('noopener')),
+    links[0]?.rel ?? '-',
+  );
+  check('mobile.de: kein iframe', (await page.$$('iframe')).length === 0);
+}
+
+// --- Standort Langenhagen -------------------------------------------------
+{
+  await page.goto(BASE, { waitUntil: 'networkidle2' });
+  const body = await text();
+  check('Standort: Langenhagen', body.includes('Langenhagen'));
+  check('Standort: Anschrift', body.includes('Ikarusallee 2') && body.includes('30179'));
 }
 
 // --- Hero-Suche -----------------------------------------------------------
@@ -326,14 +366,17 @@ await page.goto(`${BASE}/fahrzeuge`, { waitUntil: 'networkidle2' });
   await page.evaluate(() => document.querySelector('[aria-label="Menü öffnen"]')?.click());
   await wait(400);
   const menu = await text();
-  check('Mobile: Menü öffnet', menu.includes('Fahrzeuge') && menu.includes('Finanzierung'));
+  check('Mobile: Menü öffnet', menu.includes('Fahrzeuge') && menu.includes('Aufbereitung'));
   await page.setViewport({ width: 1440, height: 900 });
 }
 
 // --- Konsole & Ressourcen -------------------------------------------------
 const realErrors = consoleErrors.filter((e) => !e.includes('favicon') && !e.includes('404'));
 check('Keine Konsolenfehler', realErrors.length === 0, realErrors.slice(0, 3).join(' | '));
-const missing = [...new Set(failedRequests)].filter((u) => !u.includes('favicon') && !u.includes('gibt-es-nicht'));
+// 'gibt-es-nicht' und '/finanzierung' werden absichtlich angesteuert und müssen 404 liefern.
+const missing = [...new Set(failedRequests)].filter(
+  (u) => !u.includes('favicon') && !u.includes('gibt-es-nicht') && !u.includes('/finanzierung'),
+);
 check('Keine fehlenden Ressourcen', missing.length === 0, missing.slice(0, 3).join(' | '));
 
 await browser.close();

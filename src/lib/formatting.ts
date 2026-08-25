@@ -5,11 +5,6 @@ export function formatPrice(value: number): string {
   return `${nf({ maximumFractionDigits: 0 }).format(value)} €`;
 }
 
-/** 1549.42 → "1.549 €" */
-export function formatRate(value: number): string {
-  return `${nf({ maximumFractionDigits: 0 }).format(Math.round(value))} €`;
-}
-
 /** 18450 → "18.450 km" */
 export function formatMileage(km: number): string {
   return `${nf().format(km)} km`;

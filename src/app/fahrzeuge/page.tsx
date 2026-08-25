@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PageHeader } from '@/components/layout/page-header';
 import { VehicleExplorer } from '@/components/vehicles/vehicle-explorer';
+import { MobileDeBand } from '@/components/vehicles/mobile-de-band';
 import { getAllVehicles, countByStatus } from '@/lib/vehicle-repository';
 import { parseFilters, parseSort } from '@/lib/filter-params';
 
@@ -24,7 +25,7 @@ export default async function VehiclesPage({
       <PageHeader
         eyebrow="Fahrzeugbestand"
         title="Ihr nächstes Automobil wartet hier."
-        lead="Jedes Fahrzeug in unserem Bestand haben wir selbst geprüft, aufbereitet und dokumentiert. Was Sie hier sehen, steht in Hannover."
+        lead="Jedes Fahrzeug in unserem Bestand haben wir selbst geprüft, aufbereitet und dokumentiert. Was Sie hier sehen, steht in Langenhagen."
         aside={
           <dl className="tnum flex gap-8 md:flex-col md:gap-4 md:border-l md:border-line md:pl-8">
             <div>
@@ -44,6 +45,7 @@ export default async function VehiclesPage({
       />
 
       <VehicleExplorer all={all} initialFilters={parseFilters(params)} initialSort={parseSort(params)} />
+      <MobileDeBand />
     </>
   );
 }

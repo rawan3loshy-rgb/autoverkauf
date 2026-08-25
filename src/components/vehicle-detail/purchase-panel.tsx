@@ -6,15 +6,13 @@ import { ArrowRight, Check, MapPin, Phone } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { site } from '@/lib/site';
 import type { Vehicle } from '@/lib/types';
-import { formatMileage, formatPrice, formatRate, formatRegistration, ps } from '@/lib/formatting';
-import { FINANCE_RATE, monthlyRate } from '@/lib/vehicle-utils';
+import { formatMileage, formatPrice, formatRegistration, ps } from '@/lib/formatting';
 import { StatusBadge } from '@/components/vehicles/vehicle-card';
 
 const ASSURANCES = ['Technisch geprüft und aufbereitet', 'Historie dokumentiert', 'Probefahrt nach Vereinbarung'];
 
 export function PurchasePanel({ vehicle }: { vehicle: Vehicle }) {
   const sold = vehicle.status === 'Verkauft';
-  const rate = monthlyRate(vehicle.price, Math.round(vehicle.price * 0.2), 48, FINANCE_RATE, Math.round(vehicle.price * 0.35));
 
   const scrollToForm = (topic: string) => {
     const el = document.getElementById('anfrage');
@@ -39,13 +37,6 @@ export function PurchasePanel({ vehicle }: { vehicle: Vehicle }) {
           {formatPrice(vehicle.price)}
         </p>
         <p className="mt-2 text-xs text-ivory-500">Inkl. gesetzlicher MwSt., zzgl. Überführung · MwSt. ausweisbar</p>
-
-        {!sold && (
-          <div className="mt-5 flex items-baseline justify-between border-t border-line pt-5">
-            <span className="text-[0.8125rem] text-ivory-400">Finanzierung ab</span>
-            <span className="tnum text-[0.9375rem] text-ivory">{formatRate(rate)} / Monat</span>
-          </div>
-        )}
 
         <dl className="tnum mt-5 grid grid-cols-2 gap-x-4 gap-y-3 border-t border-line pt-5 text-[0.8125rem]">
           <Mini label="Erstzulassung" value={formatRegistration(vehicle.firstRegistration)} />

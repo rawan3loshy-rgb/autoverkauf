@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { SectionHeading } from '@/components/ui/section-heading';
+import { MobileDeLink } from './mobile-de-band';
 import { VehicleCard } from './vehicle-card';
 import type { Vehicle } from '@/lib/types';
 
@@ -11,7 +12,7 @@ export function InventoryPreview({ vehicles, total }: { vehicles: Vehicle[]; tot
         <SectionHeading
           eyebrow="Aktueller Bestand"
           title="Aktuelle Fahrzeuge"
-          lead="Sorgfältig ausgewählt. Geprüft. Bereit für die nächste Fahrt."
+          lead="Entdecken Sie unsere aktuellen Fahrzeuge und finden Sie das passende Automobil für Ihre nächste Fahrt."
           action={
             <Link
               href="/fahrzeuge"
@@ -31,6 +32,8 @@ export function InventoryPreview({ vehicles, total }: { vehicles: Vehicle[]; tot
             <VehicleCard key={v.id} vehicle={v} priority={i < 3} />
           ))}
         </div>
+
+        <MobileDeLink className="mt-12" />
       </div>
     </section>
   );

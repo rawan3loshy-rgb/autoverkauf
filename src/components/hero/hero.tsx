@@ -6,7 +6,7 @@ import type { Vehicle } from '@/lib/types';
 import { formatPrice } from '@/lib/formatting';
 import { fullName } from '@/lib/vehicle-utils';
 
-const TRUST = ['Geprüfte Fahrzeuge', 'Finanzierung möglich', 'Deutschlandweiter Ankauf'];
+const TRUST = ['Geprüfte Fahrzeuge', 'Professionelle Aufbereitung', 'Deutschlandweiter Ankauf'];
 
 export function Hero({ feature }: { feature: Vehicle }) {
   return (
@@ -29,7 +29,7 @@ export function Hero({ feature }: { feature: Vehicle }) {
 
       <div className="container relative z-10 pb-[7.5rem] pt-32 md:pb-[10rem]">
         <div className="max-w-[54rem]">
-          <p className="eyebrow lead-rule">Gebrauchtwagen · Ankauf · Beratung</p>
+          <p className="eyebrow lead-rule">Fahrzeughandel · Ankauf · Aufbereitung</p>
 
           <h1 className="headline-xl mt-6 text-ivory">
             Automobile
@@ -38,7 +38,7 @@ export function Hero({ feature }: { feature: Vehicle }) {
           </h1>
 
           <p className="mt-7 max-w-[44rem] text-[1.0625rem] leading-relaxed text-ivory-300 md:text-lg">
-            Ausgewählte Fahrzeuge. Geprüfte Qualität. Persönliche Beratung.
+            Fahrzeuge kaufen, verkaufen und professionell aufbereiten lassen.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -53,10 +53,10 @@ export function Hero({ feature }: { feature: Vehicle }) {
               />
             </Link>
             <Link
-              href="/ankauf"
+              href="/aufbereitung"
               className="inline-flex h-[3.25rem] items-center justify-center border border-line-strong px-7 text-[0.8125rem] font-medium uppercase tracking-wider text-ivory backdrop-blur-sm transition-colors duration-150 hover:border-ivory/45 hover:bg-ivory/[0.05]"
             >
-              Fahrzeug verkaufen
+              Aufbereitung anfragen
             </Link>
           </div>
 

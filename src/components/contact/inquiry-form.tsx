@@ -9,12 +9,21 @@ import { Consent, FormField, Input, Textarea } from '@/components/ui/form-field'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { email as validateEmail, phone as validatePhone, referenceNumber, required, submitDemo, type Errors } from '@/lib/form-utils';
 
-export type Topic = 'kauf' | 'probefahrt' | 'finanzierung' | 'inzahlungnahme' | 'termin' | 'suchauftrag' | 'allgemein';
+export type Topic =
+  | 'kauf'
+  | 'probefahrt'
+  | 'aufbereitung'
+  | 'leasingrueckgabe'
+  | 'inzahlungnahme'
+  | 'termin'
+  | 'suchauftrag'
+  | 'allgemein';
 
 export const TOPICS: { value: Topic; label: string }[] = [
   { value: 'kauf', label: 'Kaufanfrage' },
   { value: 'probefahrt', label: 'Probefahrt vereinbaren' },
-  { value: 'finanzierung', label: 'Finanzierung / Leasing' },
+  { value: 'aufbereitung', label: 'Fahrzeugaufbereitung' },
+  { value: 'leasingrueckgabe', label: 'Aufbereitung vor Leasingrückgabe' },
   { value: 'inzahlungnahme', label: 'Inzahlungnahme' },
   { value: 'termin', label: 'Termin im Showroom' },
   { value: 'suchauftrag', label: 'Suchauftrag' },

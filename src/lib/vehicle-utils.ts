@@ -189,28 +189,3 @@ export function similarVehicles(all: Vehicle[], current: Vehicle, limit = 3): Ve
     .map((x) => x.v);
 }
 
-/** Nomineller Demo-Zinssatz. Keine echte Kondition, keine Bonitätsprüfung. */
-export const FINANCE_RATE = 3.99;
-
-/** Anteil des Fahrzeugpreises, der bei der 3-Wege-Finanzierung als Schlussrate stehen bleibt. */
-export const BALLOON_SHARE = 0.35;
-
-/**
- * Beispielrechnung: Annuitätendarlehen, optional mit Schlussrate (3-Wege-Finanzierung).
- * Bewusst nachvollziehbar gehalten – die Werte sind unverbindliche Demo-Werte.
- */
-export function monthlyRate(
-  price: number,
-  downPayment: number,
-  months: number,
-  annualRate: number = FINANCE_RATE,
-  balloon = 0,
-): number {
-  const principal = Math.max(price - downPayment, 0);
-  if (principal <= 0 || months <= 0) return 0;
-  const i = annualRate / 100 / 12;
-  const cappedBalloon = Math.min(balloon, principal);
-  if (i === 0) return (principal - cappedBalloon) / months;
-  const discount = Math.pow(1 + i, -months);
-  return ((principal - cappedBalloon * discount) * i) / (1 - discount);
-}

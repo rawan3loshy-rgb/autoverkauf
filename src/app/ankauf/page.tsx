@@ -10,7 +10,7 @@ import { site } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'Fahrzeugankauf',
   description:
-    'Fahrzeug verkaufen oder in Zahlung geben: Beschreiben Sie Ihr Fahrzeug in vier Schritten und erhalten Sie eine Einschätzung von Autokunst in Hannover.',
+    'Fahrzeug verkaufen oder in Zahlung geben: Beschreiben Sie Ihr Fahrzeug in vier Schritten und erhalten Sie eine Einschätzung von Autokunst in Langenhagen.',
 };
 
 const ADVANTAGES = [

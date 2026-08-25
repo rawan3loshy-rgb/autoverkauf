@@ -6,7 +6,7 @@ import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Kontakt',
-  description: `Autokunst in ${site.city}: Telefon ${site.phone}, ${site.street}, ${site.zip} ${site.city}. Probefahrt, Beratung, Finanzierung und Ankauf – wir melden uns innerhalb eines Werktages.`,
+  description: `Autokunst in ${site.city}: Telefon ${site.phone}, ${site.street}, ${site.zip} ${site.city}. Probefahrt, Beratung, Ankauf und Fahrzeugaufbereitung – wir melden uns innerhalb eines Werktages.`,
 };
 
 export default async function KontaktPage({

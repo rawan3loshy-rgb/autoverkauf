@@ -10,7 +10,7 @@ import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Über uns',
-  description: `Autokunst aus ${site.city}: Ankauf und Verkauf ausgewählter Gebrauchtwagen. Geprüfte Fahrzeuge, dokumentierte Historie, persönliche Beratung.`,
+  description: `Autokunst aus ${site.city}: Ankauf, Verkauf und professionelle Aufbereitung ausgewählter Fahrzeuge. Geprüfte Fahrzeuge, dokumentierte Historie, persönliche Beratung.`,
 };
 
 const PRINCIPLES = [
@@ -24,7 +24,7 @@ const PRINCIPLES = [
   },
   {
     title: 'Ein Ansprechpartner, vom ersten Anruf bis zur Übergabe',
-    text: 'Keine Warteschleife, keine wechselnden Zuständigkeiten. Wer Ihr Fahrzeug bewertet, begleitet Sie auch durch Finanzierung, Zulassung und Übergabe.',
+    text: 'Keine Warteschleife, keine wechselnden Zuständigkeiten. Wer Ihr Fahrzeug bewertet, begleitet Sie auch durch Aufbereitung, Zulassung und Übergabe.',
   },
 ];
 
@@ -34,7 +34,7 @@ export default function UeberUnsPage() {
       <PageHeader
         eyebrow="Über uns"
         title="Automobile mit Charakter."
-        lead="Autokunst ist ein inhabergeführter Fahrzeughandel in Hannover. Wir kaufen und verkaufen ausgewählte Fahrzeuge – mit einem kleinen Team und einem klaren Anspruch."
+        lead="Autokunst ist ein inhabergeführter Fahrzeughandel in Langenhagen. Wir kaufen und verkaufen ausgewählte Fahrzeuge und bereiten Fahrzeuge professionell auf – mit einem kleinen Team und einem klaren Anspruch."
       />
 
       <section className="bg-ink-900 py-16 md:py-24">

@@ -14,12 +14,48 @@ export function ContactClosing() {
           <p className="eyebrow lead-rule">Kontakt</p>
           <h2 className="headline-lg mt-5 text-ivory">Sprechen wir über Ihr nächstes Fahrzeug.</h2>
           <p className="mt-6 max-w-xl text-pretty text-[1.0625rem] leading-relaxed text-ivory-300">
-            Ob Kaufinteresse, Probefahrt, Finanzierung oder Ankauf – am schnellsten geht es telefonisch. Alternativ
+            Ob Kaufinteresse, Probefahrt, Ankauf oder Aufbereitung – am schnellsten geht es telefonisch. Alternativ
             melden wir uns nach Ihrer Anfrage innerhalb eines Werktages zurück.
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-px border border-line bg-line sm:grid-cols-3">
+        <div className="mt-12 grid gap-px border border-line bg-line sm:grid-cols-2">
+          <Reveal className="bg-ink-900 p-6 md:p-7">
+            <p className="eyebrow-muted">Fahrzeughandel</p>
+            <p className="mt-3 font-display text-[1.0625rem] font-medium tracking-tight text-ivory">
+              Sie interessieren sich für eines unserer Fahrzeuge?
+            </p>
+            <Link
+              href="/fahrzeuge"
+              className="group mt-5 inline-flex items-center gap-2.5 border-b border-line-strong pb-1.5 text-[0.8125rem] uppercase tracking-wider text-ivory transition-colors duration-150 hover:border-champagne"
+            >
+              Fahrzeuge entdecken
+              <ArrowRight
+                className="h-4 w-4 text-champagne transition-transform duration-200 ease-premium group-hover:translate-x-1"
+                strokeWidth={1.75}
+              />
+            </Link>
+          </Reveal>
+
+          <Reveal delay={70} className="bg-ink-900 p-6 md:p-7">
+            <p className="eyebrow-muted">Fahrzeugaufbereitung</p>
+            <p className="mt-3 font-display text-[1.0625rem] font-medium tracking-tight text-ivory">
+              Ihr Fahrzeug benötigt eine professionelle Aufbereitung?
+            </p>
+            <Link
+              href="/aufbereitung#anfrage"
+              className="group mt-5 inline-flex items-center gap-2.5 border-b border-line-strong pb-1.5 text-[0.8125rem] uppercase tracking-wider text-ivory transition-colors duration-150 hover:border-champagne"
+            >
+              Aufbereitung anfragen
+              <ArrowRight
+                className="h-4 w-4 text-champagne transition-transform duration-200 ease-premium group-hover:translate-x-1"
+                strokeWidth={1.75}
+              />
+            </Link>
+          </Reveal>
+        </div>
+
+        <div className="mt-10 grid gap-px border border-line bg-line sm:grid-cols-3">
           <ContactTile
             icon={Phone}
             label="Telefon"

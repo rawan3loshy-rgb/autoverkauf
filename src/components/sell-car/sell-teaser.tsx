@@ -55,7 +55,7 @@ export function SellTeaser() {
                 href="/ankauf"
                 className="group inline-flex h-[3.25rem] items-center justify-center gap-2.5 bg-champagne px-7 text-[0.8125rem] font-medium uppercase tracking-wider text-ink-900 transition-colors duration-150 hover:bg-champagne-light"
               >
-                Fahrzeug bewerten lassen
+                Fahrzeug anbieten
                 <ArrowRight
                   className="h-4 w-4 transition-transform duration-200 ease-premium group-hover:translate-x-1"
                   strokeWidth={1.75}

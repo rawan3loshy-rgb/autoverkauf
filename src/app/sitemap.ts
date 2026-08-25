@@ -4,7 +4,7 @@ import { getVehicleSlugs } from '@/lib/vehicle-repository';
 const BASE = 'https://autokunst.de';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ['', '/fahrzeuge', '/ankauf', '/finanzierung', '/ueber-uns', '/kontakt'].map((path) => ({
+  const staticRoutes = ['', '/fahrzeuge', '/ankauf', '/aufbereitung', '/ueber-uns', '/kontakt'].map((path) => ({
     url: `${BASE}${path}`,
     changeFrequency: 'weekly' as const,
     priority: path === '' ? 1 : 0.8,

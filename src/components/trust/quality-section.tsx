@@ -11,7 +11,7 @@ const PILLARS = [
   {
     icon: Wrench,
     title: 'Technische Prüfung',
-    text: 'Antrieb, Fahrwerk, Bremsen und Elektronik durchlaufen eine Prüfung in unserer Partnerwerkstatt in Hannover.',
+    text: 'Antrieb, Fahrwerk, Bremsen und Elektronik durchlaufen eine Prüfung in unserer Partnerwerkstatt.',
   },
   {
     icon: SprayCan,

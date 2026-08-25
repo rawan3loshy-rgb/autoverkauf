@@ -32,7 +32,9 @@ export function ShowroomSection() {
               <div className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-champagne" strokeWidth={1.5} />
                 <address className="text-sm not-italic leading-relaxed text-ivory-300">
-                  <span className="block text-ivory">{site.city}</span>
+                  <span className="block text-ivory">
+                    {site.city} · {site.region}
+                  </span>
                   {site.street}
                   <br />
                   {site.zip} {site.city}

@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     template: '%s | Autokunst',
   },
   description:
-    'Ausgewählte Gebrauchtwagen, geprüfte Qualität und persönliche Beratung. Autokunst in Hannover kauft und verkauft Fahrzeuge deutschlandweit.',
+    'Fahrzeughandel und professionelle Fahrzeugaufbereitung in Langenhagen. Autokunst kauft und verkauft Fahrzeuge – und bereitet Ihr Fahrzeug auf, auch vor der Leasingrückgabe.',
   openGraph: {
     type: 'website',
     locale: 'de_DE',
     siteName: 'Autokunst',
     title: 'Autokunst — Automobile mit Charakter.',
-    description: 'Ausgewählte Fahrzeuge. Geprüfte Qualität. Persönliche Beratung.',
+    description: 'Fahrzeuge kaufen, verkaufen und professionell aufbereiten lassen.',
   },
 };
 
